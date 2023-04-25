@@ -1,35 +1,156 @@
 <html>
-  <head>
+
+<head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <script type="text/javascript">
-      google.charts.load('current', {packages:['wordtree']});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable(
-          [ ['Phrases'],
-            ['cats are better than dogs'],            ['cats eat kibble'],
-            ['cats are better than hamsters'],            ['cats are awesome'],
-            ['cats are people too'],            ['cats eat mice'],
-            ['cats meowing'],            ['cats in the cradle'],
-            ['cats eat mice'],            ['cats in the cradle lyrics'],
-            ['cats eat kibble'],            ['cats for adoption'],
-            ['cats are family'],            ['cats eat mice'],
-            ['cats are better than kittens'],            ['cats are evil'],
-            ['cats are weird'],            ['cats eat mice'],
-          ]
-        );
-        var options = {
-          wordtree: {
-            format: 'implicit',
-            word: 'cats'
-          }
-        };
-        var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic'));
-        chart.draw(data, options);
-      }
+        google.charts.load('current', { packages: ['wordtree'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            //t1
+            var data = google.visualization.arrayToDataTable(
+                [['Phrases'],
+                ['cats are better than dogs'], ['cats eat kibble'],
+                ['cats are better than hamsters'], ['cats are awesome'],
+                ['cats are people too'], ['cats eat mice'],
+                ['cats meowing'], ['cats in the cradle'],
+                ['cats eat mice'], ['cats in the cradle lyrics'],
+                ['cats eat kibble'], ['cats for adoption'],
+                ['cats are family'], ['cats eat mice'],
+                ['cats are better than kittens'], ['cats are evil'],
+                ['cats are weird'], ['cats eat mice'],
+                ]
+            );
+            var options = {
+                wordtree: {
+                    format: 'implicit',
+                    word: 'cats'
+                }
+            };
+            var chart = new google.visualization.WordTree(document.getElementById('t1'));
+            chart.draw(data, options);
+            //t2
+            var data = google.visualization.arrayToDataTable(
+                [
+                    ['фрази'],
+                    ['коти кращі ніж хомяки'],
+                    ['коти кращі ніж єноти'],
+                    ['коти кращі ніж кролі'],
+                    ['коти люблять нявкати'],
+                    ['коти люблять лазити у шафу'],
+                    ['коти люблять лазити на стіл'],
+                    ['коти друзі собак'],
+                    ['коти люблять спати зранку'],
+                    ['коти люблять спати вдень'],
+                    ['коти люблять стрибати'],
+                    ['коти люблять стрибати на диван'],
+                    ['коти люблять стрибати на паркан'],
+                    ['коти люблять стрибати на дерева'],
+                    ['коти гуляють уночі'],
+                    ['коти гуляють на самоті '],
+                    ['коти живуть з людьми'],
+                    ['коти живуть на вулиці'],
+                    ['коти живуть довго'],
+                    ['коти їдять ковбасу'],
+                    ['коти їдять корм'],
+                    ['коти їдять мишей'],
+                    ['коти друзі дітей'],
+                ]);
+            var options = {
+                wordtree: {
+                    format: 'implicit',
+                    word: 'коти'
+                }
+            };
+            var chart = new google.visualization.WordTree(document.getElementById('t2'));
+            chart.draw(data, options);
+            //t3
+            var data = google.visualization.arrayToDataTable(
+                [['Phrases'],
+                ['Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that a nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this. But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.']
+                ]
+            );
+            var options = {
+                wordtree: {
+                    format: 'implicit',
+                    type: 'double',
+                    word: 'nation'
+                }
+            };
+            var wordtree = new google.visualization.WordTree(document.getElementById('t3'));
+            wordtree.draw(data, options);
+            //t4
+
+            var data = google.visualization.arrayToDataTable(
+                [
+                    ['фрази'],
+                    ['Правила дорожнього руху вимагають дотримання велосипедистами спеціальних правил'],
+                    ['Правила передбачають обовʼязкове використання світлоповертачів'],
+                    ['Правила вимагають дотримання велосипедистами відстані між автомобілями'],
+                    ['Правила передбачають дотримання велосипедистами правил проїзду перехресть'],
+                    ['Правила передбачають користування велосипедистами велосипедними доріжками'],
+                    ['Правила забороняють велосипедистам рухатись по тротуарах'],
+                    ['Правила велосипедного руху включають дотримання дорожніх знаків'],
+                    ['Правила передбачають дотримання велосипедистами швидкісних обмежень'],
+                    ['Правила дорожнього руху для велосипедистів стосуються дисципліни безпеки руху'],
+                    ['Правила вимагають від велосипедистів наявність робочого гальма'],
+                    ['Правила передбачають використання велосипедистами рефлектуючих елементів'],
+                    ['Правила вимагають дотримання велосипедистами правил стоянки'],
+                    ['Правила передбачають дотримання велосипедистами правил руху в колоні'],
+                    ['Правила передбачають дотримання велосипедистами правил руху у групі']
+                ]);
+            var options = {
+                wordtree: {
+                    format: 'implicit',
+                    word: 'Правила'
+                }
+            };
+            var chart = new google.visualization.WordTree(document.getElementById('t4'));
+            chart.draw(data, options);
+
+            //t5-1
+            var data = google.visualization.arrayToDataTable(
+                [['Phrases'],
+                ["Swift is a powerful, open-source programming language developed by Apple Inc., designed for iOS, macOS, watchOS, tvOS, and beyond. Launched in 2014, Swift quickly gained popularity due to its expressive syntax, strong type safety, and modern features, earning its spot among the top programming languages in the world. Swift's syntax is easy to read and write, making it accessible to beginners while also offering advanced features for experienced programmers. With its focus on performance and safety, Swift optimizes code for efficiency, reducing the likelihood of common programming errors. Swift includes functional programming patterns, enabling developers to write clean and reusable code.Additionally, Swift supports object - oriented and protocol - oriented programming, providing a flexible approach to software design. Interoperability with Objective - C, Apple's previous programming language, allows developers to seamlessly integrate Swift into existing projects. Furthermore, Swift's active and growing community ensures constant improvement and support for the language."]]
+            );
+            var options = {
+                wordtree: {
+                    format: 'implicit',
+                    type: 'double',
+                    word: 'Swift'
+                }
+            };
+            var wordtree = new google.visualization.WordTree(document.getElementById('t5-1'));
+            wordtree.draw(data, options);
+
+            //t5-2
+
+            var data = google.visualization.arrayToDataTable(
+                [['Phrases'],
+                ["The iPhone is a revolutionary series of smartphones designed and marketed by Apple Inc. First introduced in 2007 by Steve Jobs, the iPhone has since become a symbol of innovation, setting the standard for modern smartphone technology. With its sleek design, intuitive user interface, and powerful features, the iPhone has consistently been a popular choice among consumers worldwide. iPhones run on Apple's iOS operating system, which is known for its user-friendliness, security, and seamless integration with other Apple products. The App Store, an integral part of the iOS ecosystem, provides users with access to millions of apps, catering to a wide range of needs and interests. Notable iPhone features include high - quality cameras, advanced biometric security options like Face ID and Touch ID, and the Siri voice assistant.Apple continuously improves upon the iPhone with new hardware and software releases, consistently pushing the boundaries of smartphone technology. The iPhone's success can be attributed to its focus on user experience, innovative design, and unmatched performance, making it a go-to choice for many smartphone users around the globe."]]
+            );
+            var options = {
+                wordtree: {
+                    format: 'implicit',
+                    type: 'double',
+                    word: 'iPhone'
+                }
+            };
+            var wordtree = new google.visualization.WordTree(document.getElementById('t5-2'));
+            wordtree.draw(data, options);
+
+        }
     </script>
-  </head>
-  <body>
-    <div id="wordtree_basic" style="width: 900px; height: 500px;"></div>
-  </body>
+</head>
+
+<body style="display: flex; flex-direction: column; align-items: center;">
+    <div id="t1" style="width: 900px; height: 500px; border-bottom: 2px solid black;"></div>
+    <div id="t2" style="width: 900px; height: 500px; border-bottom: 2px solid black;"></div>
+    <div id="t3" style="width: 900px; height: 500px; border-bottom: 2px solid black;"></div>
+    <div id="t4" style="width: 900px; height: 500px; border-bottom: 2px solid black;"></div>
+    <div id="t5-1" style="width: 900px; height: 500px; border-bottom: 2px solid black;"></div>
+    <div id="t5-2" style="width: 900px; height: 500px; border-bottom: 2px solid black;"></div>
+</body>
+
 </html>
